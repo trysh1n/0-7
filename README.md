@@ -22,8 +22,10 @@ transl_sent = {'А': '11000000', 'Б': '11000001', 'В': '11000010', 'Г': '1100
 
 input_string = "Любовь - это не значит смотреть друг на друга, любить - значит смотреть в одном направлении."
 
+# Закодированная строка в виде списка двоичных кодов
 encoded_string = ''.join([transl_sent.get(char, '') for char in input_string])
 
+# Разделяем строку на части по 8 символов с пробелами
 encoded_string_with_spaces = ' '.join([encoded_string[i:i+8] for i in range(0, len(encoded_string), 8)])
 
 print(f"Закодированная строка: {encoded_string_with_spaces}")
